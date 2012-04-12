@@ -1,5 +1,5 @@
 class Resignation
-  attr_accessor :name,:date,:kind_note,:reason_array
+  attr_accessor :name,:date,:kind_note,:reason_array,:signoff
   def initialize(employee_name,end_date)
     @name=employee_name
     @date=end_date
@@ -10,7 +10,7 @@ class Resignation
   end
   def resign!
     reason = reason_array ? reason_array[rand(reason_array.size)]+" " : ""
-    puts "#{reason}#{kind_note} #{name} here by resigns effective as of #{date}.\n\n-#{name}"
+    puts "#{reason}#{kind_note} I, #{name}, here by resign effective as of #{date}.\n\n#{signoff}\n-#{name}"
   end
 end
 
@@ -26,5 +26,6 @@ reasons = [
   "I need to devote more time to upvoting articles on Hacker News."
   ]
 becker.random_reasons(reasons)
+becker.signoff = "Until an asteroid,"
 becker.resign!
 
