@@ -1,1 +1,7 @@
 My resignation letter in ruby code
+
+Example:
+
+becker$ ruby resignation.rb 
+I need to devote more time to upvoting articles on Hacker News. I must cheer from the side lines now. Becker here by resigns effective as of 2012-04-27
+

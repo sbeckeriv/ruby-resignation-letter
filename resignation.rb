@@ -14,7 +14,7 @@ class Resignation
   end
 end
 becker = Resignation.new("Becker","2012-04-27")
-becker.kind_note("I must cheer from the side lines now.")
+becker.kind_note = "I must cheer from the side lines now."
 reasons = [
   "It is time for me to move on.",
   "A T-rex told me in a dream to find a new job.",
