@@ -7,7 +7,7 @@ class Resignation
   end
 
   def resign!
-    puts "#{kind_note} #{name} here by resigns affect as of #{date}"
+    puts "#{kind_note} #{name} here by resigns effective as of #{date}"
   end
 end
 becker = Resignation.new("Becker","2012-04-27")
