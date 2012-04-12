@@ -10,7 +10,7 @@ class Resignation
   end
   def resign!
     reason = reason_array ? reason_array[rand(reason_array.size)]+" " : ""
-    puts "#{reason}#{kind_note} #{name} here by resigns effective as of #{date}"
+    puts "#{reason}#{kind_note} #{name} here by resigns effective as of #{date}.\n\n-#{name}"
   end
 end
 becker = Resignation.new("Becker","2012-04-27")
