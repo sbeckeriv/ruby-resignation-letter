@@ -10,7 +10,7 @@ class Resignation
   end
   def resign!
     reason = reason_array ? reason_array[rand(reason_array.size)]+" " : ""
-    puts "#{reason}#{kind_note} I, #{name}, here by resign effective as of #{date}.\n\n#{signoff}\n-#{name}"
+    puts "#{reason}#{kind_note} I, #{name}, hereby resign effective as of #{date}.\n\n#{signoff}\n-#{name}"
   end
 end
 
