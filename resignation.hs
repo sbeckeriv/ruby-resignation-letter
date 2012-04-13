@@ -15,7 +15,7 @@ main = do reason <- pick reasons
           putStrLn $ resignation name date note reason signoff
        where name = "Becker"
              date = "2012-04-27"
-             note = "I must cheer from the side lines now."
+             note = "I must cheer from the sidelines now."
              signoff = "Until an asteroid,"
              reasons = [
                "It is time for me to move on.",
