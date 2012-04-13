@@ -7,8 +7,7 @@ class Resignation
   random_reasons: (reasons) ->
     @reason_array = reasons
   resign: -> 
-    reason = ""
-    reason = @reason_array[Math.floor(Math.random()*@reason_array.length)]+" " if @reason_array?
+    reason =  if @reason_array? then @reason_array[Math.floor(Math.random()*@reason_array.length)]+" " else ""
     alert "#{reason}#{@kind_note} I, #{@name}, hereby resign effective as of #{@date}.\n\n#{@signoff}\n-#{@name}"
 
 becker = new Resignation "Becker", "2012-04-27"
