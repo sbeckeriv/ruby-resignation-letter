@@ -21,7 +21,7 @@ I, {name}, hereby resign effective as of {date}.
                                 name=self.name, date=self.date, signoff=self.signoff)
 
 becker = Resignation("Becker", "2012-04-27")
-becker.kind_note = "I must cheer from the side lines now."
+becker.kind_note = "I must cheer from the sidelines now."
 reasons = [
   "It is time for me to move on.",
   "A T-rex told me in a dream to find a new job.",
