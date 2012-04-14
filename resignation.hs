@@ -4,15 +4,18 @@ import Random
 
 pick xs = randomRIO (0, length xs - 1) >>= return . (xs !!)
 
-resignation name date kind_note reason signoff = unlines output
-    where output = map fold [intro, main, exit]
-          fold = foldl (++) ""
-          intro = [reason, " ", kind_note]
-          main = ["I, ", name, " hereby resign effective as of ", date]
-          exit = [signoff, "- ", name]
+resignation name date kind_note reason signoff = [
+    [reason, kind_note],
+    ["I,", name ++ ",", "hereby resign effective as of", date],
+    [signoff],
+    ["-", name]
+    ]
+
+resign = unlines . map (foldl addspace "")
+    where addspace xs ys = xs ++ " " ++ ys
 
 main = do reason <- pick reasons
-          putStrLn $ resignation name date note reason signoff
+          putStrLn $ resign $ resignation name date note reason signoff
        where name = "Becker"
              date = "2012-04-27"
              note = "I must cheer from the sidelines now."
